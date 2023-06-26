@@ -14,20 +14,21 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 //#region
+Route::get('/login', [LoginController::class, 'show_login'])->name('login');
 
 Route::post('/login', [LoginController::class,'process_login'])->name('postlogin');
 Route::post('/register', [LoginController::class,'process_signup'])->name('postsignup');
-// Route::post('/logout', [LoginController::class,'logout'])->name('logout');
+Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //#endregion
-
+Route::get('/teacher', function () {
+    return view('master.tmaster');
+});
 
 Route::get('/', function () {
     return view('master.master');
 });
 //login
-Route::get('/login', function () {
-    return view('frontend.login');
-});
+
 
 
 //homepage

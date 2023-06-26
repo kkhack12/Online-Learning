@@ -6,7 +6,7 @@
                  <div class="col-lg-4 col-md-4 col-sm-12">
                      <div class="widget text-widget">
                          <p>
-                             <a href="index.html"><img src="../assets/images/footer/F_Logo.png" alt="Footer Logo" /></a>
+                             <a href="index.html"><img src="../assets/images/header/edu-white.png" width="75px" height="50px" alt="Footer Logo" /></a>
                          </p>
                          <p>Edution is an outstanding PSD template targeting educational institutions, helping them
                              establish strong identity on the internet without any real developing knowledge.

@@ -15,7 +15,6 @@
     <!--srart theme style -->
     <link href="../assets/css/main.css" rel="stylesheet" type="text/css" />
     <link href="../assets/css/default-style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
     <!-- favicon links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -24,7 +23,7 @@
 </head>
 <body>
 
-@include('master.header')
+@include('master.theader')
 
 @if(Session('success'))
 <div class=" p-2 d-flex justify-content-between  " >
@@ -35,7 +34,7 @@
 @endif
 @yield('content')
 
-@include('master.footer')
+@include('master.tfooter')
 
     
 </body>

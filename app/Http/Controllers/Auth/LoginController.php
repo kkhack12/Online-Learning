@@ -4,13 +4,17 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User; // User Model
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+// use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 class LoginController extends Controller
 {
 
-
+    public function show_login(){
+        return view('frontend.login');
+    }
+    // process login
     public function process_login(Request $request)
     {
         $request->validate([
@@ -30,6 +34,7 @@ class LoginController extends Controller
         return redirect('/')->with('success', 'You have been logged in.');
     }
 
+    // process signup
     public function process_signup(Request $request)
     {
 
@@ -61,4 +66,14 @@ class LoginController extends Controller
         return redirect('/')->with('success', 'You have been logged in.');
 
     }
+    // prcess logout
+    public function logout()
+    {
+        Auth::logout();
+        
+        // Redirect the user to a specific page after logout
+        return redirect('/')->with('success', 'You have been logged out.');
+    }
+
+
 }
